@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorBotFrameWork", "HorBotFrameWork\HorBotFrameWork.csproj", "{109AF0AC-0F3E-41E0-BA3B-F83FC25846DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorBotFrameWork", "..\src\HorBotFrameWork\HorBotFrameWork.csproj", "{109AF0AC-0F3E-41E0-BA3B-F83FC25846DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
