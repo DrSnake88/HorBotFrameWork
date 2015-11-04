@@ -10,7 +10,7 @@ namespace HorBotFrameWork.Web
     public static class Extract
     {
         // Get the source code of the passed document
-        public static string Document(string url)
+        public static string Document(Uri url)
         {
             var document = "";
 
@@ -22,12 +22,19 @@ namespace HorBotFrameWork.Web
             return document;
         }
 
-        public static List<string> Paragraphs(string url)
+        public static List<string> Paragraphs(Uri url)
         {
             var document = Document(url);
             var paragraphs = Utility.GetBetween(document, new string[] { "<p>", "</p>"} );
 
             return paragraphs;
         }
+
+        public static List<string> Paragraphs(string input)
+        {
+            var paragraphs = Utility.GetBetween(input, new string[] {"<p>", "</p>"});
+
+            return paragraphs;
+        } 
     }
 }

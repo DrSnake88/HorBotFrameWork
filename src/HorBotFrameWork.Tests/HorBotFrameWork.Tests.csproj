@@ -55,6 +55,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\ExtractTests.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HorBotFrameWork\HorBotFrameWork.csproj">
+      <Project>{109af0ac-0f3e-41e0-ba3b-f83fc25846db}</Project>
+      <Name>HorBotFrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

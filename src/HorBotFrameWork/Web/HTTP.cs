@@ -19,6 +19,11 @@ namespace HorBotFrameWork.Web
             Request = WebRequest.CreateHttp(uri); // Save a WebRequest to the Request variable
         }
 
+        public static void OpenRequest(Uri uri)
+        {
+            Request = WebRequest.CreateHttp(uri); // Save a WebRequest to the Request variable
+        }
+
         public static void OpenResponse()
         {
             Response = (HttpWebResponse)Request.GetResponse(); // Get the response of the saved request

@@ -16,18 +16,18 @@ namespace HorBotFrameWork.Web
             var tokenLocations = new int[2]; // Helper variable to store the locations of the token in the input
 
             // Convert all to lower text, so we don't have to compare capitalization
-            input = input.ToLower(); 
+            var testInput = input.ToLower(); 
             tokens[0] = tokens[0].ToLower();
             tokens[1] = tokens[1].ToLower();
             
-            var count = Regex.Matches(input, tokens[0]).Count; // The amount of times, the first token has been found
+            var count = Regex.Matches(testInput, tokens[0]).Count; // The amount of times, the first token has been found
 
             // For every match
             for (var i = 0; i < count; i++)
             {
                 var loc = new Regex[] {new Regex(tokens[0]), new Regex(tokens[1])  };
-                tokenLocations[0] = loc[0].Match(input, tokenLocations[0] + 1).Index; // Location of the first token
-                tokenLocations[1] = loc[1].Match(input, tokenLocations[0] + 1).Index; // Location of the 2nd token after the first
+                tokenLocations[0] = loc[0].Match(testInput, tokenLocations[0] + 1).Index; // Location of the first token
+                tokenLocations[1] = loc[1].Match(testInput, tokenLocations[0] + 1).Index; // Location of the 2nd token after the first
 
                 if (tokenLocations[0] == -1 || tokenLocations[1] == -1) return null; // If one of the tokens hasn't been found, return null
 
