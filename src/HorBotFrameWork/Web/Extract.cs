@@ -22,6 +22,12 @@ namespace HorBotFrameWork.Web
             return document;
         }
 
-        //public static List<string>  
+        public static List<string> Paragraphs(string url)
+        {
+            var document = Document(url);
+            var paragraphs = Utility.GetBetween(document, new string[] { "<p>", "</p>"} );
+
+            return paragraphs;
+        }
     }
 }
